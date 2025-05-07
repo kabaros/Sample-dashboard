@@ -1,0 +1,25 @@
+{
+    "version": "1.0.2",
+    "name": "sample-dashboard-app",
+    "appType": "DASHBOARD_WIDGET",
+    "description": "sample-dashboard-app",
+    "icons": {
+        "16": "favicon.ico",
+        "48": "favicon.ico",
+        "128": "logo128.ico",
+        "192": "logo192.png",
+        "256": "logo256.png",
+        "512": "logo512.png"
+    },
+    "developer": {
+        "url": " HWCA",
+        "name": "HISP West & Central Africa"
+    },
+    "launch_path": "index.html",
+    "default_locale": "en",
+    "activities": {
+        "dhis": {
+            "href": "*"
+        }
+    }
+}
