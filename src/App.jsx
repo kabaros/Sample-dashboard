@@ -11,34 +11,33 @@ const getDashboardFiltersInfos = () => {
 };
 
 
-const App = () => {
+const App = (props) => {
+      console.log('All props inside:', props)
+
+      const { dashboardItemFilters = {} } = props
+
+      const { pe, ou, ...otherDimensions } = dashboardItemFilters
+
       return (
             <div className="w-full h-screen">
                   <div className="w-full flex flex-col p-4 gap-2">
                         <div className="border p-5">
                               <h1 className="font-bold text-blue-500 underline">Organisation unit from Filter </h1>
                               <div className="mt-2 flex gap-2 flex-wrap">
-                                    {getDashboardFiltersInfos()
-                                          ?.userOrgUnit?.split(';')
-                                          ?.map((ouID, index) => (
-                                                <div
-                                                      key={index}
-                                                      className="mt-2 bg-slate-100 p-1 border rounded-2xl text-sm"
-                                                >
-                                                      {ouID}
-                                                </div>
-                                          ))}
+                                    {JSON.stringify(ou)}
                               </div>
                         </div>
 
                         <div className="border p-5">
                               <h1 className="font-bold text-blue-500 underline">Period from Filter </h1>
-                              <div>  </div>
+                              <div> 
+                                     {JSON.stringify(pe)}
+                              </div>
                         </div>
 
                         <div className="border p-5">
                               <h1 className="font-bold text-blue-500 underline">Other dimenssions </h1>
-                              <div> </div>
+                              <div> {JSON.stringify(otherDimensions)} </div>
                         </div>
                   </div>
             </div>
